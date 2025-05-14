@@ -19,7 +19,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2 
       with:
-        python-version: 3.12.3  
+        python-version: 3.12.3 
+        
+    - name: Set up virtual environment
+      run: |
+        python -m venv env
+        source env/bin/activate 
 
     - name: Install dependencies
       run: |
@@ -29,3 +34,4 @@ jobs:
     - name: Run tests with pytest
       run: |
         pytest --maxfail=1 --disable-warnings -q  # Run pytest and stop after 1 failure
+    
