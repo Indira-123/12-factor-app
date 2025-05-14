@@ -1,9 +1,9 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from app.config import MODEL_NAME
 
 def download_model():
-    model_name = "distilbert-base-uncased-finetuned-sst-2-english"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 
     model.save_pretrained("./model")
     tokenizer.save_pretrained("./model")

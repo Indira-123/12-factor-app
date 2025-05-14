@@ -12,3 +12,5 @@ env/
 # Docker
 .dockerignore
 Dockerfile
+
+./model

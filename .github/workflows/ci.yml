@@ -26,8 +26,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Download model
+      env:
+        MODEL_NAME: ${{ secrets.MODEL_NAME}}
+      run: |
+        python -m scripts.download_model
+
     - name: Run tests with pytest
       env:
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        MODEL_NAME
       run: |
         pytest --maxfail=1 --disable-warnings -q
