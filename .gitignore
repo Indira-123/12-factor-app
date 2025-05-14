@@ -1,0 +1,14 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment directory
+env/
+
+# Environment variables file
+.env
+
+# Docker
+.dockerignore
+Dockerfile
