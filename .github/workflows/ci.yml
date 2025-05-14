@@ -34,6 +34,6 @@ jobs:
 
     - name: Run tests with pytest
       env:
-        MODEL_NAME
+        MODEL_NAME: ${{ secrets.MODEL_NAME}}
       run: |
         pytest --maxfail=1 --disable-warnings -q
