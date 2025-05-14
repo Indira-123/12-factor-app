@@ -7,7 +7,7 @@ app = FastAPI()
 class TextRequest(BaseModel):
     text: str
 
-@app.post("/")
+@app.post("/analyze")
 def sentiment_analysis(request: TextRequest):
     sentiment = analyze_sentiment(request.text)
     return {"sentiment": sentiment}
