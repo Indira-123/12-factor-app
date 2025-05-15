@@ -4,7 +4,7 @@ A FastAPI server for sentiment analysis using Hugging Face transformers.
 
 ## Features
 
-- Sentiment analysis ( positive(2) / negative(0) / neutral(1) ) for input text
+- Sentiment analysis ( positive(2) / negative(0) / neutral(1) ) for input texts
 - Uses pre-trained model
 - FastAPI with automatic docs with Swagger UI
 
